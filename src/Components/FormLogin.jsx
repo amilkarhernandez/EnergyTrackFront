@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import '../Styles/Login.css';
 import ButtonLogin from './ButtonLogin';
+import ButtonRegister from './ButtonRegister';
 
 const FormLogin = () => {
   const [usuario, setUsuario] = useState('');
@@ -89,7 +90,7 @@ const FormLogin = () => {
             </div>
             <ButtonLogin fnIniciarSesion={iniciarSesion} label={'Ingresar'} />
             <hr className="w-48 h-1 mx-auto my-1 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
-            {/* <ButtonRegister fnRegistarse={irRegistrar} label={'Registrarse'} /> */}
+            <ButtonRegister fnRegistarse={irRegistrar} label={'Registrarse'} />
           </form>
         </section>
       </div>
