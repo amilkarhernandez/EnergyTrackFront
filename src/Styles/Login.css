@@ -1,0 +1,78 @@
+.main {
+  @apply flex justify-center bg-[#52cef5];
+}
+
+.contenedor {
+  @apply flex items-center h-screen justify-center;
+}
+
+.form-container {
+  @apply flex w-[900px] h-[500px] bg-white border-none rounded-lg shadow-lg overflow-hidden;
+}
+
+.form-signin {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
+  background-color: white;
+}
+
+.form-signin h1 {
+  font-size: 36px;
+  color: #1c4355;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contain-inputs {
+  @apply flex justify-evenly flex-col items-end;
+}
+.form-signin input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #7ff8e280;
+  font-size: 18px;
+  color: #1c4355;
+}
+
+input:focus {
+  outline: 2px solid #43d8f1;
+}
+
+.mensajeBienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
+  color: #1c4355;
+  background-image: url('../assets/rightbox.svg');
+}
+.mensajeBienvenida h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.mensajeBienvenida p {
+  font-size: 20px;
+}
+
+.mensajeBienvenida p span {
+  color: #1c495f;
+  padding: 3px;
+  font-weight: 700;
+}
+
+.password-recover {
+  @apply text-xs text-gray-500 mt-1 no-underline flex hover:text-[#1c4355] hover:underline;
+}
