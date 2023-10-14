@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+// import Button from 'react-bootstrap/Button';
+// import { IoArrowBackSharp } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import BackButtonRegister from './BackButtonRegister';
 import ButtonRegister from './ButtonRegister';
 
 const FormRegister = () => {
@@ -11,6 +14,10 @@ const FormRegister = () => {
   const [usuario, setUsuario] = useState('');
   const [contraseña, setContraseña] = useState('');
   const navigate = useNavigate();
+
+  const irLogin = () => {
+    navigate('/');
+  };
 
   const Registrarse = async (e) => {
     e.preventDefault();
@@ -44,7 +51,8 @@ const FormRegister = () => {
       <div className="flex items-center h-screen justify-center">
         <section className="flex justify-around items-center w-[700px] h-[500px] bg-white border-none rounded-lg shadow-lg overflow-hidden">
           <form className="flex items-center p-2 justify-evenly flex-col bg-white">
-            <h1 className="text-4xl text-center flex justify-center items-center text-[#1c4355] font-bold uppercase">
+            <BackButtonRegister fnIrAlLogin={irLogin} />
+            <h1 className="text-4xl mb-3 text-center flex justify-center items-center text-[#1c4355] font-bold uppercase">
               Registrarse
             </h1>
             <div className="flex justify-evenly flex-col items-end">
@@ -100,12 +108,6 @@ const FormRegister = () => {
               </div>
             </div>
             <ButtonRegister fnRegistarse={Registrarse} label={'Registrarse'} />
-            <a
-              className="text-lg text-gray-500 mt-1 no-underline flex hover:text-[#1c4355] hover:underline"
-              href="http://localhost:5173/"
-            >
-              Volver al Inicio de sesión
-            </a>
           </form>
         </section>
       </div>
