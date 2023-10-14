@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import { IoArrowBackSharp } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import BackButtonRegister from './BackButtonRegister';
+import BackButton from './BackButton';
 import ButtonRegister from './ButtonRegister';
 
 const FormRegister = () => {
@@ -51,7 +51,9 @@ const FormRegister = () => {
       <div className="flex items-center h-screen justify-center">
         <section className="flex justify-around items-center w-[700px] h-[500px] bg-white border-none rounded-lg shadow-lg overflow-hidden">
           <form className="flex items-center p-2 justify-evenly flex-col bg-white">
-            <BackButtonRegister fnIrAlLogin={irLogin} />
+            <div className="relative left-[314px] z-auto">
+              <BackButton fnIrAlLogin={irLogin} />
+            </div>
             <h1 className="text-4xl mb-3 text-center flex justify-center items-center text-[#1c4355] font-bold uppercase">
               Registrarse
             </h1>
