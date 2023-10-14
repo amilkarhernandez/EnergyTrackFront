@@ -1,0 +1,9 @@
+a.dropdown-toggle.nav-link {
+  display: flex;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -95px;
+  background-color: black;
+  --bs-dropdown-link-color: white;
+}
