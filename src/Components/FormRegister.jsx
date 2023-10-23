@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import { IoArrowBackSharp } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { Constantes } from '../../utils/Constantes';
+import Constantes from '../../utils/Constantes';
 import BackButton from './BackButton';
 import ButtonRegister from './ButtonRegister';
 
