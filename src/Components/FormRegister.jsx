@@ -22,7 +22,7 @@ const FormRegister = () => {
 
   const Registrarse = async (e) => {
     e.preventDefault();
-    const endPoint = Constantes.URL_BASE + '/usuarios/create';
+    const endPoint = Constantes.URL_BASE + '/usuarios/registarse';
 
     const data = {
       nombres: nombre,
@@ -36,6 +36,7 @@ const FormRegister = () => {
       .post(endPoint, data)
       .then((resp) => {
         console.log(resp);
+        Swal.fire('Información!', 'Registrado Exitosamente!', 'success');
         navigate('/');
       })
       .catch((error) => {
