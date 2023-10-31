@@ -13,8 +13,9 @@ const UserDropdown = () => {
       <NavDropdown
         title={<img src={usericon} alt="user poto" className="w-11 h-11" />}
       >
-        <NavDropdown.Item href="#action/3.1">Configuración</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Cerrar sesión</NavDropdown.Item>
+        <NavDropdown.Item href="http://localhost:5173/">
+          Cerrar sesión
+        </NavDropdown.Item>
       </NavDropdown>
     </div>
   );
