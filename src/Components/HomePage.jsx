@@ -31,8 +31,6 @@ const HomePage = () => {
     setSlideIndex((prev) => (prev - 1 + 3) % 3);
   };
 
-  const layout = () => {};
-
   return (
     <main className="bg-[#a7eaff] min-h-screen">
       <nav className="bg-[#43D8F1] flex justify-between items-center">
@@ -105,7 +103,7 @@ const HomePage = () => {
             responsable.
           </p>
         </div>
-        <div className="w-1/3">
+        <div className="w-1/3 shadow-lg">
           <div
             id="carouselExampleIndicators"
             className="carousel slide"
