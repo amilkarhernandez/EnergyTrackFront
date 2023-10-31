@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Constantes from '../../utils/Constantes';
 import '../Styles/Login.css';
+import BackButton from './BackButton';
 import ButtonLogin from './ButtonLogin';
 import ButtonRegister from './ButtonRegister';
 
@@ -13,6 +14,9 @@ const FormLogin = () => {
   const navigate = useNavigate();
   const irRegistrar = () => {
     navigate('/register');
+  };
+  const irHome = () => {
+    navigate('/');
   };
   const iniciarSesion = async (e) => {
     e.preventDefault();
@@ -62,6 +66,9 @@ const FormLogin = () => {
             <p>¡Nos complace mucho contar contigo!</p>
           </div>
           <form className="form-signin">
+            <div className="flex relative left-[180px] bottom-4">
+              <BackButton fnIrAlLogin={irHome} />
+            </div>
             <h1>Ingresar</h1>
             <div className="contain-inputs">
               <div className="mb-3">

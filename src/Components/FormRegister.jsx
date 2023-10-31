@@ -17,7 +17,7 @@ const FormRegister = () => {
   const navigate = useNavigate();
 
   const irLogin = () => {
-    navigate('/');
+    navigate('/login');
   };
 
   const Registrarse = async (e) => {
