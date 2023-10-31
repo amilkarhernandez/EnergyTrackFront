@@ -1,6 +1,7 @@
 import axios from 'axios';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
+import { Form } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import Swal from 'sweetalert2';
 import Constantes from '../../utils/Constantes';
@@ -116,16 +117,20 @@ const Modalconsumos = ({
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Número de Piso</label>
-            <input
-              type="text"
-              className="form-control"
-              aria-describedby="pisoHelp"
+            <label className="form-label">Piso</label>
+            <Form.Select
+              aria-label="Default select example"
               onChange={(e) => {
                 setNumPiso(e.target.value);
               }}
               value={NumPiso}
-            />
+            >
+              <option value="1">Piso 1</option>
+              <option value="2">Piso 2</option>
+              <option value="3">Piso 3</option>
+              <option value="4">Piso 4</option>
+              <option value="5">Piso 5</option>
+            </Form.Select>
           </div>
         </form>
       </Modal.Body>
