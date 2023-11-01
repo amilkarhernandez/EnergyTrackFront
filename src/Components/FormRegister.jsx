@@ -37,7 +37,7 @@ const FormRegister = () => {
       .then((resp) => {
         console.log(resp);
         Swal.fire('Información!', 'Registrado Exitosamente!', 'success');
-        navigate('/');
+        navigate('/login');
       })
       .catch((error) => {
         console.log(error);
