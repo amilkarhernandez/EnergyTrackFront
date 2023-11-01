@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json ./
 
 #Copia todas las dependencias
-COPY package-lockjson .
+COPY package-lock.json .
 
 #Ejecutar este comando, cuando ya tenga en package.json: 
 #decirle al contenedror que lo instale cuando se desgargue de git
